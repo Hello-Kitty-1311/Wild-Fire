@@ -1,0 +1,112 @@
+
+Wildfire Detection System - ANALYSIS REPORT
+Generated on: 2025-07-11 15:50:58
+================================================
+
+DATASET OVERVIEW
+================
+Total Samples: 244
+Training Samples: 193
+Test Samples: 49
+Number of Features: 12
+
+Class Distribution:
+- fire: 137 (56.1%)
+- not fire: 105 (43.0%)
+- Classes: 1 (0.4%)
+
+FEATURE LIST
+============
+Temperature, RH, Ws, Rain, Wind_Rain_Ratio, Fire_Weather_Index, FFMC, DMC, DC, ISI, BUI, FWI
+
+MODEL PERFORMANCE COMPARISON
+============================
+
+Random Forest:
+  - Accuracy:  0.9796
+  - Precision: 0.9545
+  - Recall:    1.0000
+  - F1-Score:  0.9767
+
+Gradient Boosting:
+  - Accuracy:  0.9796
+  - Precision: 0.9545
+  - Recall:    1.0000
+  - F1-Score:  0.9767
+
+Extra Trees:
+  - Accuracy:  0.9592
+  - Precision: 0.9130
+  - Recall:    1.0000
+  - F1-Score:  0.9545
+
+Logistic Regression:
+  - Accuracy:  0.9796
+  - Precision: 0.9545
+  - Recall:    1.0000
+  - F1-Score:  0.9767
+
+SVM:
+  - Accuracy:  0.9184
+  - Precision: 0.8696
+  - Recall:    0.9524
+  - F1-Score:  0.9091
+
+K-Nearest Neighbors:
+  - Accuracy:  0.9388
+  - Precision: 0.9091
+  - Recall:    0.9524
+  - F1-Score:  0.9302
+
+Naive Bayes:
+  - Accuracy:  0.9184
+  - Precision: 0.8696
+  - Recall:    0.9524
+  - F1-Score:  0.9091
+
+Neural Network:
+  - Accuracy:  0.9388
+  - Precision: 0.9091
+  - Recall:    0.9524
+  - F1-Score:  0.9302
+
+Decision Tree:
+  - Accuracy:  0.9796
+  - Precision: 0.9545
+  - Recall:    1.0000
+  - F1-Score:  0.9767
+
+BEST MODEL ANALYSIS
+===================
+Best Model: Random Forest
+Best Parameters: {'max_depth': 5, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 50}
+
+Tuned Model Performance:
+- Accuracy:  0.9796
+- Precision: 0.9545
+- Recall:    1.0000
+- F1-Score:  0.9767
+
+FEATURE IMPORTANCE (Top 5)
+==========================
+1. ISI: 0.3951
+2. FWI: 0.1580
+3. FFMC: 0.1432
+4. BUI: 0.1129
+5. Wind_Rain_Ratio: 0.0613
+
+CONFUSION MATRIX ANALYSIS
+=========================
+True Negatives:  27
+False Positives: 1
+False Negatives: 0
+True Positives:  21
+
+Sensitivity (Recall): 1.0000
+Specificity:         0.9643
+
+KEY INSIGHTS
+============
+1. Weather conditions significantly impact fire occurrence
+2. ISI is the most important predictor
+3. Random Forest achieved the best performance with F1-score of 0.9767
